@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Montserrat", Arial, sans-serif;
+  background-color: #1c2736;
+}
+
+h1 {
+  color: white;
+  font-size: 2.5em;
+}
+
+.container {
+  text-align: center;
+}
+
+#search {
+  font-family: "Montserrat", Arial, sans-serif;
+  -webkit-transition: width 0.7s ease-out;
+  transition: width 0.7s ease-out;
+  background-color: #006eff;
+  width: 20px;
+  height: 20px;
+  padding: 20px;
+  border-radius: 30px;
+  border: 0;
+  color: white;
+  cursor: pointer;
+  font-size: 1.6em;
+}
+
+#search::-webkit-input-placeholder {
+  color: #9fc9ff;
+}
+
+#search:-ms-input-placeholder {
+  color: #9fc9ff;
+}
+
+#search::-ms-input-placeholder {
+  color: #9fc9ff;
+}
+
+#search::placeholder {
+  color: #9fc9ff;
+}
+
+#search:focus {
+  outline: none;
+}
+
+.search-contain img {
+  width: 22px;
+  margin: 18px 0 0 18px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.search-contain p {
+  -webkit-transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-in;
+  color: #6a9ee2;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  text-align: left;
+  margin-left: 50px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.search-contain #loading-background {
+  z-index: -1;
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  border: 4px solid #6a9ee2;
+  position: absolute;
+  -webkit-animation: grow 1.3s infinite;
+          animation: grow 1.3s infinite;
+}
+
+@-webkit-keyframes grow {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 60;
+  }
+  to {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes grow {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 60;
+  }
+  to {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=main.css.map */

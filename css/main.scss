@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", Arial, sans-serif;
+  background-color: rgb(28, 39, 54);
+}
+
+h1 {
+  color: white;
+  font-size: 2.5em;
+}
+
+.container {
+  text-align: center;
+}
+
+#search {
+  font-family: "Montserrat", Arial, sans-serif;
+  transition: width 0.7s ease-out;
+  background-color: rgb(0, 110, 255);
+  width: 20px;
+  height: 20px;
+  padding: 20px;
+  border-radius: 30px;
+  border: 0;
+  color: white;
+  cursor: pointer;
+  font-size: 1.6em;
+
+  &::placeholder {
+    color: rgb(159, 201, 255);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.search-contain {
+  img {
+    width: 22px;
+    margin: 18px 0 0 18px;
+    position: absolute;
+    cursor: pointer;
+  }
+
+  p {
+    transition: opacity 0.3s ease-in;
+
+    color: rgb(106, 158, 226);
+    text-transform: uppercase;
+    font-size: 0.8em;
+    text-align: left;
+    margin-left: 50px;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  #loading-background {
+    z-index: -1;
+    border-radius: 50%;
+    width: 52px;
+    height: 52px;
+    border: 4px solid rgb(106, 158, 226);
+    position: absolute;
+    animation: grow 1.3s infinite;
+  }
+}
+
+@keyframes grow {
+  from {
+    transform: scale(1);
+    opacity: 60;
+  }
+
+  to {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
